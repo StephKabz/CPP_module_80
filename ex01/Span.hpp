@@ -6,7 +6,7 @@
 /*   By: stkabang <stkabang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 19:48:19 by stkabang          #+#    #+#             */
-/*   Updated: 2026/03/24 19:53:41 by stkabang         ###   ########.fr       */
+/*   Updated: 2026/03/24 19:54:11 by stkabang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ class Span {
 		void addNumber();
 		int shortestSpan();
 		int longestSpan();
-}
+};
 
 #endif
