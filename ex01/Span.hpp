@@ -6,7 +6,7 @@
 /*   By: kingstephane <kingstephane@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 19:48:19 by stkabang          #+#    #+#             */
-/*   Updated: 2026/03/25 02:03:40 by kingstephan      ###   ########.fr       */
+/*   Updated: 2026/03/25 15:05:22 by kingstephan      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <vector>
 #include <list>
 #include <cmath>
+#include <climits>
 #include <exception>
 
 class Span {
@@ -33,11 +34,12 @@ class Span {
 		void addNumber(int n);
 		int shortestSpan();
 		int longestSpan();
+		unsigned int getCapacity();
 		template <typename Iterator>
-		void Span::addRangeOfNumbers(Iterator begin, Iterator end)
+		void addRangeOfNumbers(Iterator begin, Iterator end)
 		{
 			for (Iterator it = begin; it != end; it++)
-				addNumber(*it);
+				this->addNumber(it);
 		};
 		class NoNumberStored : public std::exception
 		{
@@ -57,7 +59,7 @@ class Span {
 		{
 			virtual const char* what() const throw()
 			{
-				return "Vector is already!";
+				return "Vector is already Full!";
 			};
 		};
 };

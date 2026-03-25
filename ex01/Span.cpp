@@ -6,7 +6,7 @@
 /*   By: kingstephane <kingstephane@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 00:07:54 by kingstephan       #+#    #+#             */
-/*   Updated: 2026/03/25 02:03:28 by kingstephan      ###   ########.fr       */
+/*   Updated: 2026/03/25 14:53:29 by kingstephan      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,11 @@ int Span::longestSpan()
 		throw Span::OneNumberStored();
 	return ((*std::max_element(this->numbers.begin(), this->numbers.end()))
 			 - (*std::min_element(this->numbers.begin(), this->numbers.end())));
+};
+
+unsigned int Span::getCapacity()
+{
+	return (this->max_capacity);
 };
 
 int max_minus_min(int a, int b)
